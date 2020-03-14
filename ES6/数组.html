@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //数组
+        //map可以进行映射
+        //例子1
+        console.log("");
+        console.log("map:");
+        let arr=[1,2,3,4,5,6];  
+        let result = arr.map(value=>value *2)
+        console.log(result);
+
+        //例子2
+        console.log("");
+        let arr1=[2,4,5,6,7,8];
+        let result1 = arr1.map(value1=>value1%2==0?"偶数":"奇数");
+        console.log(result1);
+
+        //reduce汇总，回调函数
+        //汇总的index第0位和最后一位没有显示，因为缺少前一参数或者后一参数所以没有显示
+        //例子1
+        console.log("");
+        console.log("reduce:");
+        let arr2=[3,5,6,7,2,3];
+        let result2 = arr2.reduce(function(first,second,index){
+            console.log("前一个参数："+first+" ,  后一个参数："+second+" ,  Index: "+index);
+            return first + second;
+        })
+        console.log(result2);
+
+        //例子2
+        //求平均值
+        console.log("");
+        let result3 = arr2.reduce(function(first,second,index){
+            if(index==arr2.length-1){
+                return (first+second)/arr2.length;
+            }
+            else{
+                return first+second;
+            }
+        })
+        console.log(result3);
+   
+        //filter过滤数
+        //返回的是布尔类型
+        //例子1
+        console.log("");
+        console.log("filter:");
+        let result4 = arr2.filter(value2=>{
+            if(value2%2==0){
+                return true;
+            }
+            else{
+                return false;
+            }      
+        })
+        console.log(result4);
+
+        //foreach循环
+        console.log("");
+        console.log("foreach:")
+        arr2.forEach(element => {
+            console.log(element);
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
