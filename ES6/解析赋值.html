@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //解析赋值
+        //左右两边结构必须一样
+        //声明和赋值不能分开(就是不能声明后，另起一行然后赋值)
+        //右边必须有变量
+
+        //例子1
+        let [a,b,c] = [1,2,3];
+        console.log(a,b,c);
+
+        //例子2
+        let {d,f,g} = {d:1,f:2,g:3};
+        console.log(d,f,g);
+
+        //例子3
+        let [{n1,n2},[n3,n4],num,str] = [{n1:1,n2:2},[3,4],5,"你好"];
+        console.log(n1,n2,n3,n4,num,str);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
