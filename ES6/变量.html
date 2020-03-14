@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+
+            var Btn1 = document.getElementsByClassName("res1");
+            var Btn2 = document.getElementsByClassName("res2");
+            var Btn3 = document.getElementsByClassName("res3");     
+
+            //1.var
+            //由于var在javascript中可以重复声明，所以每次for loop都会重新声明var的数值。
+            //所以下面的button获取的值始终是最后一个。
+            for(var i=0; i<Btn1.length;i++)
+            {
+                Btn1[i].onclick=function()
+                {
+                    alert(i);
+                }
+            }
+
+            //2.let
+            //由于let具有模块化功能，所以变量无法重复声明但是可以进行修改
+            //下面button能够获取到每个key
+            for(let i=0;i<Btn2.length;i++)
+            {
+               Btn2[i].onclick=function()
+               {
+                   alert(i);
+               } 
+            }
+
+            //3.const
+            //const具有模块化并且是个常量，一旦定义后就无法进行修改      
+            for(const i=0;i<Btn3.length;i++)
+            {
+                Btn3[i].onclick = function()
+                {
+                        alert(i);   
+                }            
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <div>
+            <h2>var</h2>
+            <button class="res1">button</button>
+            <button class="res1">button</button>
+            <button class="res1">button</button>
+            <button class="res1">button</button>
+        </div>
+
+        <div>
+            <h2>let</h2>
+            <button class="res2">button</button>
+            <button class="res2">button</button>
+            <button class="res2">button</button>
+            <button class="res2">button</button>
+        </div>
+
+        <div>
+            <h2>const</h2>
+            <button class="res3">button</button>
+            <button class="res3">button</button>
+            <button class="res3">button</button>
+            <button class="res3">button</button>
+        </div>
+    </div>
+</body>
+</html>
