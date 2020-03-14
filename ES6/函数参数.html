@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //函数参数
+        //...args代表剩余参数，或者用于展开参数
+        window.onload=function()
+        {
+            function show(a,b,...args)
+            {
+                alert(a);
+                alert(b);
+                alert(args);
+            }
+            show(1,2,3,4,5,6,7);
+
+            let arr1=[1,2,3];
+            let arr2=[4,5,6];
+            let arrSum=[...arr1,...arr2];
+            alert(arrSum);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
