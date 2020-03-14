@@ -4,6 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        //面向对象
+        //es6新方法例子
+        console.log("");
+        class NewUser
+        {
+            constructor(one,two)
+            {
+                this.one = one;
+                this.two = two;
+            }
+
+            showOne()
+            {
+                console.log(this.one);
+            }
+
+            showTwo()
+            {
+                console.log(this.two);
+            } 
+        }
+
+        var nu = new NewUser("num1", "num2");
+
+        nu.showOne();
+        nu.showTwo();
+
+        //继承
+        //es6新方法例子
+        console.log("");
+        class SuperUser extends NewUser
+        {
+            constructor(one, two, three)
+            {
+                super(one,two);
+                this.three = three;
+            }
+
+            showThree()
+            {
+                console.log(this.three);
+            }
+        }
+
+        var supUser = new SuperUser("number1","number2","number3");
+        supUser.showOne();
+        supUser.showTwo();
+        supUser.showThree();
+
+    </script>
 </head>
 <body>
     
