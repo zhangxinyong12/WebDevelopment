@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //JSON的规范
+        let json = {a:1,b:2,c:3};
+
+        //1.解析时要用命名要用引号，只能用双引号
+        let json1 = '{"a": 1,"b": 2, "c": 3}';
+
+        //2.JSON中string的转换
+        let str = JSON.stringify(json1);
+
+        //3.JSON中的URL转换
+        let str1 = encodeURIComponent(JSON.stringify(json));
+
+        //4.JSON中变量名和值一样时，可以省略key或者value
+        let a=2;
+        let b=3;
+        json2 = {a,b,c:4};
+
+        //JSON中的parse用法
+        let str2 = JSON.parse(json1);
+
+        console.log(str);
+        console.log(str1);
+        console.log(str2);
+        console.log(json2);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
