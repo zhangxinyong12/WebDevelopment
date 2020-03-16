@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //Generator的简单实现
+        function * show(num1,num2){
+
+            console.log(`${num1},${num2}`);
+            alert('a');
+
+            let a = yield;
+
+            alert('b');
+            alert(a);
+        }
+
+        let geo = show(99,88);
+        //第一次next是在定义a为yield的之前实行，所以a并没有获取到11这个值
+        geo.next(11);
+        //第二次next是在定义完a后实行，所以a获取到的值是3
+        geo.next(3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
