@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js" charset="utf-8"></script>
+    <script>
+
+        //Promise的第二个方法的简单写法
+        Promise.all([
+            $.ajax({url:'data/data.txt', dataType:'json'}),
+            $.ajax({url:'data/data1.txt', dataType:'json'})
+        ]).then(
+            arr=>{
+                let [res1,res2] = arr;
+                console.log('Success');
+                console.log(res1);
+                console.log(res2);
+            },
+            err=>{
+                console.log('fail: '+err);
+            }
+        );
+
+        //Promise的race就是把all替换，作用是ajax读取谁快就使用谁
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

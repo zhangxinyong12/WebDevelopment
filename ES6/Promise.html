@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js" charset="utf-8"></script>
+    <script>
+        //promise的用法
+        let p1 = new Promise(function(resolve, reject){
+            $.ajax({
+                url:'data/data.txt',
+                dataType:'json',
+                success(arr){
+                    resolve(arr);
+                },
+                error(err){
+                    reject(err);
+                }
+            })
+        });
+
+        //ajax成功执行后，promise的用法 
+        //单个执行例子
+        p1.then(function(arr){
+            console.log('成功:'+arr);
+        }, function(){
+            console.log('失败');
+        })
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
