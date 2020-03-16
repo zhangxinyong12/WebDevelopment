@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //ES7新添加内容
+
+        //include是否包含，包含返回布尔值
+        let arr = [12,32,31,34,25,64];
+        console.log(arr.includes(6));
+
+        //for in用于for loop,返回的是key
+        for(let i in arr)
+        {
+            console.log("值："+i);
+        }
+
+        //for of用于for loop,返回的是value
+        for(let entry of arr.entries())
+        {
+            console.log(entry);
+        }
+
+        //如果只单纯想提取value，可以使用解析赋值
+        for(let [key,value] of arr.entries()){
+            console.log("index:"+key+", value:"+value);
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
